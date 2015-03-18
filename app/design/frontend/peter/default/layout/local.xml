@@ -4,5 +4,10 @@
         <reference name="left_first" before="-">
             <block type="core/template" as="date" template="date.phtml" />
         </reference>
+        <reference name="top.links">
+            <!--<action method="removeLinkByUrl"><url helper="checkout/url/getCartUrl"></url></action>
+            <remove name="checkout_cart_link"/>-->
+            <action method="removeLinkByUrl"><url helper="checkout/url/getCheckoutUrl"></url></action>
+        </reference>
     </default>
 </layout>
