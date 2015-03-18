@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <week3_index_index>
+        <block type="core/template" parent="content" name="week3_index" template="week3/index.phtml" />
+    </week3_index_index>
+</layout>
