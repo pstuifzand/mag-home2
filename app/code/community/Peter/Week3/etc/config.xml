@@ -7,11 +7,14 @@
     </modules>
     <global>
         <helpers>
-            <peter_week1>
+            <peter_week3>
                 <class>Peter_Week3_Helper</class>
-            </peter_week1>
+            </peter_week3>
         </helpers>
         <blocks>
+            <week3>
+                <class>Peter_Week3_Block</class>
+            </week3>
             <page>
                 <rewrite>
                     <html_breadcrumbs>Peter_Week3_Block_Html_Breadcrumbs</html_breadcrumbs>

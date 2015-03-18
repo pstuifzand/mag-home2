@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<widgets>
+    <peter_week3 type="week3/colorpicker">
+        <name>Colorpicker</name>
+        <description type="desc">Colorpicker</description>
+        <parameters>
+            <title>
+                <label>Title</label>
+                <frontend_type>text</frontend_type>
+                <validate>text</validate>
+                <sort_order>1</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>1</show_in_store>
+            </title>
+            <border>
+                <label>Border Color</label>
+                <frontend_type>text</frontend_type>
+                <validate>color</validate>
+                <sort_order>1</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>1</show_in_store>
+            </border>
+        </parameters>
+    </peter_week3>
+</widgets>
