@@ -7,19 +7,19 @@
     </modules>
     <frontend>
         <routers>
-            <peter_week3_controller>
+            <week3>
                 <use>standard</use>
                 <args>
                     <module>Peter_Week3</module>
                     <frontName>week3</frontName>
                 </args>
-            </peter_week3_controller>
+            </week3>
         </routers>  
         <layout>
             <updates>
-                <module>
+                <week3>
                     <file>peter_week3.xml</file>
-                </module>
+                </week3>
             </updates>
         </layout>
     </frontend>
