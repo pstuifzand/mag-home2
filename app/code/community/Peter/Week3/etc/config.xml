@@ -5,6 +5,20 @@
             <version>0.1.0</version>
         </Peter_Week3>
     </modules>
+    <global>
+        <helpers>
+            <peter_week1>
+                <class>Peter_Week3_Helper</class>
+            </peter_week1>
+        </helpers>
+        <blocks>
+            <page>
+                <rewrite>
+                    <html_breadcrumbs>Peter_Week3_Block_Html_Breadcrumbs</html_breadcrumbs>
+                </rewrite>
+            </page>
+        </blocks>
+    </global>
     <frontend>
         <routers>
             <week3>
