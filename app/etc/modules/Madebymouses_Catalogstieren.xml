@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * This file is part of Madebymouses_Catalogstieren for Magento.
+ *
+ * @license No License
+ * @author Peter Stuifzand <peter@stuifzand.eu>
+ * @category Madebymouses
+ * @package Madebymouses_Catalogstieren
+ * @copyright 
+ * Generate with vim-magento plugin https://github.com/mjoey/vim-magento
+*/
+-->
+<config>
+    <modules>
+        <Madebymouses_Catalogstieren>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Madebymouses_Catalogstieren>
+    </modules>
+</config>

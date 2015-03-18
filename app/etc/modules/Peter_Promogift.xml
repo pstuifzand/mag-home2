@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * This file is part of Peter_Promogift for Magento.
+ *
+ * @license No License
+ * @author Peter Stuifzand <peter@stuifzand.eu>
+ * @category Peter
+ * @package Peter_Promogift
+ * @copyright 
+ * Generate with vim-magento plugin https://github.com/mjoey/vim-magento
+*/
+-->
+<config>
+    <modules>
+        <Peter_Promogift>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Peter_Promogift>
+    </modules>
+</config>

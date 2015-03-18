@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <helloconfig translate="label" module="Peter_HelloWorld">
+            <label>Hello Config</label>
+            <sort_order>99999</sort_order>
+        </helloconfig>
+    </tabs> 
+    <sections>
+        <helloworld_options translate="label" module="Peter_HelloWorld">
+            <label>Hello World Config Options</label>
+            <tab>helloconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>                    
+            <groups>
+                <messages translate="label">
+                    <label>Demo Of Config Fields</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>                
+                    <fields>
+                        <hello_message>
+                            <label>Message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                    
+                        </hello_message>
+                    </fields>                
+                </messages>
+            </groups>
+        </helloworld_options>
+    </sections>     
+</config>
