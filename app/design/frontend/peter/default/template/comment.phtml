@@ -1,0 +1,9 @@
+<h1>Comment</h1>
+<form action="/comment/postAction" method="post">
+    <textarea name="comment" row="4" cols="40"></textarea>
+    <input type="submit" value="Reageer">
+</form>
+<?php $comments = $this->getCollection() ?>
+<?php foreach ($comments as $comment): ?>
+    <p><?= $comment->getComment() ?></p>
+<?php endforeach; ?>

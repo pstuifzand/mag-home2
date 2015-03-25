@@ -6,4 +6,8 @@
             <block type="core/template" template="week3/index.phtml" />
         </reference>
     </week3_index_index>
+
+    <catalog_product_view>
+            <block type="week3/comment" name="comments" template="comment.phtml" before="product.info" />
+    </catalog_product_view>
 </layout>
