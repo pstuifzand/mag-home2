@@ -21,6 +21,27 @@
                 </rewrite>
             </page>
         </blocks>
+        <models>
+            <week3>
+                <class>Peter_Week3_Model</class>
+                <resourceModel>week3_resource</resourceModel>
+            </week3>
+            <week3_resource>
+                <class>Peter_Week3_Model_Resource</class>
+                <entities>
+                    <comment>
+                        <table>week3_comment</table>
+                    </comment>
+                </entities>
+            </week3_resource>
+        </models>
+        <resources>
+            <comment_setup>
+                <setup>
+                <module>Peter_Week3</module>
+                </setup>
+            </comment_setup>
+        </resources>
     </global>
     <frontend>
         <routers>
