@@ -6,8 +6,12 @@
             <block type="core/template" template="week3/index.phtml" />
         </reference>
     </week3_index_index>
-
     <catalog_product_view>
-            <block type="week3/comment" name="comments" template="comment.phtml" before="product.info" />
+        <reference name="product.info">
+            <block type="week3/comment" name="comments" template="comment.phtml">
+                <action method="addToParentGroup"><group>detailed_info</group></action>
+                <action method="setTitle" translate="value"><value>Comments</value></action>
+            </block>
+        </reference>
     </catalog_product_view>
 </layout>
