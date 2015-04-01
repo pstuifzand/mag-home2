@@ -32,6 +32,11 @@ class Peter_Week3_Model_Entity_Attribute_Source_Format extends Mage_Eav_Model_En
             'extra'     => null
         ));
     }
+    public function getFlatUpdateSelect($store)
+    {
+        return Mage::getResourceSingleton('eav/entity_attribute')
+            ->getFlatUpdateSelect($this->getAttribute(), $store);
+    }
 }
 
 
