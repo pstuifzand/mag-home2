@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Peter_Week3>
-            <version>0.1.12</version>
+            <version>0.1.13</version>
         </Peter_Week3>
     </modules>
     <global>
@@ -32,6 +32,27 @@
                     <comment>
                         <table>week3_comment</table>
                     </comment>
+                    <comment2_entity>
+                        <table>week3_comment2_entity</table>
+                    </comment2_entity>
+                    <comment2_entity_datetime>
+                        <table>week3_comment2_entity_datetime</table>
+                    </comment2_entity_datetime>
+                    <comment2_entity_decimal>
+                        <table>week3_comment2_entity_decimal</table>
+                    </comment2_entity_decimal>
+                    <comment2_entity_int>
+                        <table>week3_comment2_entity_int</table>
+                    </comment2_entity_int>
+                    <comment2_entity_text>
+                        <table>week3_comment2_entity_text</table>
+                    </comment2_entity_text>
+                    <comment2_entity_varchar>
+                        <table>week3_comment2_entity_varchar</table>
+                    </comment2_entity_varchar>
+                    <comment2_entity_char>
+                        <table>week3_comment2_entity_char</table>
+                    </comment2_entity_char>
                 </entities>
             </week3_resource>
         </models>
@@ -47,6 +68,25 @@
                     <class>Mage_Catalog_Model_Resource_Setup</class>
                 </setup>
             </product_week3_setup>
+            <comment_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </comment_write>
+            <comment_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </comment_read>
+            <comment2_setup>
+                <setup>
+                    <module>Peter_Week3</module>
+                    <class>Peter_Week3_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </comment2_setup>
         </resources>
     </global>
     <frontend>
