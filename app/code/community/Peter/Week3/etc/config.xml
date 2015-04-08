@@ -121,9 +121,9 @@
     <adminhtml>
         <layout>
             <updates>
-                <peter_week3>
+                <week3>
                     <file>week3.xml</file>
-                </peter_week3>
+                </week3>
             </updates>
         </layout>
     </adminhtml>
