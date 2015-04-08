@@ -3,6 +3,8 @@
 class Peter_Week3_Block_Adminhtml_Comments_Grid extends Mage_Adminhtml_Block_Widget_Grid {
     public function __construct() {
         parent::__construct();
+        $this->_blockGroup = 'week3';
+        $this->_controller = 'adminhtml_comments';
 
         $this->setId('comments');
         $this->setDefaultSort('entity_id');
@@ -38,5 +40,9 @@ class Peter_Week3_Block_Adminhtml_Comments_Grid extends Mage_Adminhtml_Block_Wid
 
     public function getGridUrl() {
         return $this->getUrl('*/*/grid', array('_current'=>true));
+    }
+
+    public function getRowUrl($row) {
+        return $this->getUrl('*/*/edit', array('id' => $row->getId()));
     }
 }

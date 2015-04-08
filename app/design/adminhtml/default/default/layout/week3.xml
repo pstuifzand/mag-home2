@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_peter_week3_comments_index>
+        <reference name="content">
+            <block type="week3/adminhtml_comments" name="comment.index" />
+        </reference>
+    </adminhtml_peter_week3_comments_index>
+    
+    <adminhtml_peter_week3_comments_edit>
+        <reference name="content">
+            <block type="week3/adminhtml_comments_edit" name="comments.edit" />
+        </reference>
+    </adminhtml_peter_week3_comments_edit>
+</layout>

@@ -17,4 +17,14 @@ class Peter_Week3_Adminhtml_CommentsController extends Mage_Adminhtml_Controller
         );
     }
 
+    public function editAction() {
+        $this->loadLayout();
+        $this->_setActiveMenu('cms/comments');
+        $this->renderLayout();
+    }
+    public function newAction() {
+        $this->loadLayout();
+        $this->_setActiveMenu('cms/comments');
+        $this->renderLayout();
+    }
 }
