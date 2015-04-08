@@ -107,4 +107,15 @@
             </updates>
         </layout>
     </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <peter_comments before="Mage_Adminhtml">Peter_Week3_Adminhtml</peter_comments>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config>

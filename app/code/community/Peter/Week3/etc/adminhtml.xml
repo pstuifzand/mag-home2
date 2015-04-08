@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <menu>
+        <cms>
+            <children>
+                <peter_comments translate="title" module="peter_week3">
+                    <sort_order>10</sort_order>
+                    <title>Comments - Peter</title>
+                    <action>adminhtml/comments/</action>
+                </peter_comments>
+            </children>
+        </cms>
+    </menu>
+</config>
