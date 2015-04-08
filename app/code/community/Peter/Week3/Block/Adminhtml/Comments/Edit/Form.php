@@ -2,6 +2,8 @@
 
 class Peter_Week3_Block_Adminhtml_Comments_Edit_Form extends Mage_Adminhtml_Block_Widget_Form {
     protected function _prepareForm() {
+        $comment = Mage::registry('comment');
+
         $form = new Varien_Data_Form(
             array(
                 'id' => 'edit_form',
@@ -10,8 +12,7 @@ class Peter_Week3_Block_Adminhtml_Comments_Edit_Form extends Mage_Adminhtml_Bloc
                 'enctype' => 'multipart/form-data'
             )
         );
-        $form->setUseContainer(true);
-        $this->setForm($form);
+
 
         $fieldset = $form->addFieldset(
             'base_fieldset',
@@ -30,6 +31,12 @@ class Peter_Week3_Block_Adminhtml_Comments_Edit_Form extends Mage_Adminhtml_Bloc
                 'name'     => 'comment',
             )
         );
+
+        $form->setUseContainer(true);
+        if ($comment) {
+            $form->setValues($comment->getData());
+        }
+        $this->setForm($form);
 
         return parent::_prepareForm();
     }

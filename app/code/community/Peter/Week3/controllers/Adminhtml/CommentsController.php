@@ -17,6 +17,9 @@ class Peter_Week3_Adminhtml_CommentsController extends Mage_Adminhtml_Controller
     }
 
     public function editAction() {
+        $id = $this->getRequest()->getParam('id');
+        $comment = Mage::getModel('week3/comment')->load($id);
+        Mage::register('comment', $comment);
         $this->loadLayout();
         $this->_setActiveMenu('cms/comments');
         $this->renderLayout();
