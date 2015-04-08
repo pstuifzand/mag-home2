@@ -3,10 +3,10 @@
 class Peter_Week3_Model_Resource_Setup extends Mage_Eav_Model_Entity_Setup {
     public function getDefaultEntities() {
         $entities = array(
-            'peter_week3_comment2' => array(
-                'entity_model' => 'peter_week3/comment2',
+            'week3_comment2' => array(
+                'entity_model' => 'week3/comment2',
                 'attribute_model' => '',
-                'table' => 'peter_week3/comment2_entity',
+                'table' => 'week3/comment2_entity',
                 'attributes' => array(
                     'message' => array(
                         'type' => 'varchar',
