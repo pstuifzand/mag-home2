@@ -1,6 +1,7 @@
 <h1>Comment</h1>
 <form action="<?= $this->getUrl('week3/comment/post') ?>" method="post">
     <input type="hidden" name="return_url" value="<?= Mage::helper('core/url')->getCurrentUrl() ?>"/>
+    <input type="hidden" name="product_id" value="<?= Mage::registry('current_product')->getId() ?>"/>
     <textarea name="comment" row="4" cols="40"></textarea>
     <br>
     <button class="button btn-default" type="submit"><?= $this->__('Comment') ?></button>

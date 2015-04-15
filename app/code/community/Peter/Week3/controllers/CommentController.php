@@ -3,8 +3,10 @@
 class Peter_Week3_CommentController extends Mage_Core_Controller_Front_Action  {
     public function postAction() {
         $text = $this->getRequest()->getParam('comment');
+        $productId = $this->getRequest()->getParam('product_id');
         $comment = Mage::getModel('week3/comment');
         $comment->setComment($text);
+        $comment->setProductId($productId);
         $comment->save();
 
         $this->_goBack();
