@@ -1,6 +1,8 @@
 <?php
 
-class Peter_Week3_Block_Adminhtml_Comments_Grid extends Mage_Adminhtml_Block_Widget_Grid {
+class Peter_Week3_Block_Adminhtml_Comments_Grid extends Mage_Adminhtml_Block_Widget_Grid
+    implements Mage_Adminhtml_Block_Widget_Tab_Interface
+{
     public function __construct() {
         parent::__construct();
         $this->_blockGroup = 'week3';
@@ -13,8 +15,32 @@ class Peter_Week3_Block_Adminhtml_Comments_Grid extends Mage_Adminhtml_Block_Wid
         $this->setUseAjax(true);
     }
 
+    public function getTabUrl()
+    {
+        return $this->getUrl('*/*/commentGrid', array('_current'=>true));
+    }
+
+    public function getTabClass()
+    {
+        return 'ajax';
+    }
+    public function getTabLabel()
+    {
+        return Mage::helper('peter_week3')->__('Comments');
+    }
+    public function getTabTitle()
+    {
+        return Mage::helper('peter_week3')->__('Comments');
+    }
+    public function _getProduct() {
+        return Mage::registry('current_product');
+    }
     protected function _prepareCollection() {
         $collection = Mage::getResourceModel('week3/comment_collection');
+
+        if ($this->_getProduct()) {
+            $collection->addFieldToFilter('product_id', $this->_getProduct()->getId());
+        }
 
         $this->setCollection($collection);
         parent::_prepareCollection();
@@ -39,10 +65,18 @@ class Peter_Week3_Block_Adminhtml_Comments_Grid extends Mage_Adminhtml_Block_Wid
     }
 
     public function getGridUrl() {
-        return $this->getUrl('*/*/grid', array('_current'=>true));
+        return $this->getUrl('*/comments/grid', array('_current'=>true));
     }
 
     public function getRowUrl($row) {
-        return $this->getUrl('*/*/edit', array('id' => $row->getId()));
+        return $this->getUrl('*/comments/edit', array('id' => $row->getId()));
+    }
+    public function canShowTab()
+    {
+        return true;
+    }
+    public function isHidden()
+    {
+        return false;
     }
 }
