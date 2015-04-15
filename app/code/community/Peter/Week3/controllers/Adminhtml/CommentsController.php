@@ -67,6 +67,22 @@ class Peter_Week3_Adminhtml_CommentsController extends Mage_Adminhtml_Controller
         $this->_redirect('*/*/');
         return;
     }
-    
+
+    public function massDeleteAction() {
+        $commentIds = $this->getRequest()->getParam('comment_id');
+        if (!is_array($commentIds)) {
+            Mage::getSingleton('adminhtml/session')->addError(Mage::helper('peter_week3')->__('Please select comments'));
+        }
+        else {
+            $id = $this->getRequest()->getParam('id');
+            $model = Mage::getModel('week3/comment');
+            foreach ($commentIds as $id) {
+                $model->load($id)->delete();
+            }
+            Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('peter_week3')->__('Multiple comments deleted'));
+        }
+        $this->_redirect('*/*/index');
+        return;
+    }
 }
 

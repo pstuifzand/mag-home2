@@ -79,4 +79,17 @@ class Peter_Week3_Block_Adminhtml_Comments_Grid extends Mage_Adminhtml_Block_Wid
     {
         return false;
     }
+    protected function _prepareMassaction()
+    {
+        $this->setMassactionIdField('comment_id');
+        $this->getMassactionBlock()->setFormFieldName('comment_id');
+         
+        $this->getMassactionBlock()->addItem('delete', array(
+            'label'=> Mage::helper('peter_week3')->__('Delete'),
+            'url'  => $this->getUrl('*/*/massDelete', array('' => '')),        // public function massDeleteAction() in Mage_Adminhtml_Tax_RateController
+            'confirm' => Mage::helper('peter_week3')->__('Are you sure?')
+        ));
+         
+        return $this;
+    }
 }
