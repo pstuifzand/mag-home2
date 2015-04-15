@@ -12,4 +12,23 @@
             </children>
         </cms>
     </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <peter translate="title" module="peter_week3">
+                                        <title>Peter Huiswerk Settings</title>
+                                    </peter>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
 </config>
