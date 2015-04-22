@@ -96,6 +96,13 @@
                 </connection>
             </comment2_setup>
         </resources>
+        <index>
+            <indexer>
+                <comment_indexer>
+                    <model>week3/indexer_comment</model>
+                </comment_indexer>
+            </indexer>
+        </index>
     </global>
     <frontend>
         <routers>
