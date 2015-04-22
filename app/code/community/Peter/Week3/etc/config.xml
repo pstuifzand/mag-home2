@@ -55,6 +55,11 @@
                     </comment2_entity_char>
                 </entities>
             </week3_resource>
+            <catalogsearch_resource>
+                <rewrite>
+                    <fulltext>Peter_Week3_Model_Resource_Fulltext</fulltext>
+                </rewrite>
+            </catalogsearch_resource>
         </models>
         <resources>
             <comment_setup>
