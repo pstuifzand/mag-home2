@@ -7,7 +7,9 @@ class Peter_Week3_Model_Resource_Fulltext extends Mage_CatalogSearch_Model_Resou
         $model = Mage::getModel('tag/tag');
         $tags = $model->getResourceCollection()
             ->addPopularity()
+            ->addStatusFilter($model->getApprovedStatus())
             ->addProductFilter($productData['entity_id'])
+            ->setFlag('relation', true)
             ->addStoreFilter($storeId)
             ->setActiveFilter()
             ->load();
