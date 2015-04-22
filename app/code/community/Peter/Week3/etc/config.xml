@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Peter_Week3>
-            <version>0.1.14</version>
+            <version>0.1.15</version>
         </Peter_Week3>
     </modules>
     <global>
@@ -32,6 +32,9 @@
                     <comment>
                         <table>week3_comment</table>
                     </comment>
+                    <indexer_comment>
+                        <table>week3_indexer_comment</table>
+                    </indexer_comment>
                     <comment2_entity>
                         <table>week3_comment2_entity</table>
                     </comment2_entity>
