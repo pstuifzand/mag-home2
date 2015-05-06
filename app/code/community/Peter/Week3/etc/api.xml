@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <api>
+        <resources>
+            <online translate="title" module="peter_week3">
+                <title>Online customers</title>
+                <model>week3/online_api</model>
+                <methods>
+                    <get translate="title" module="peter_week3">
+                        <title>Get online customer count</title>
+                    </get>
+                </methods>
+            </online>
+        </resources>
+        <v2>
+            <resources_function_prefix>
+                <online>online</online>
+            </resources_function_prefix>
+        </v2>
+        <acl>
+            <resources>
+                <online>
+                    <get>
+                        <title>Get all</title>
+                    </get>
+                </online>
+                <all>
+                </all>
+            </resources>
+        </acl>
+    </api>
+</config>
