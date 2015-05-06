@@ -21,6 +21,17 @@
                 </rewrite>
             </page>
         </blocks>
+        <events>
+            <salesrule_rule_condition_combine>
+                <observers>
+                    <peter_week3_sales_rule_condition_combine>
+                        <type>singleton</type>
+                        <class>Peter_Week3_Model_Observer</class>
+                        <method>saleRuleConditionCombine</method>
+                    </peter_week3_sales_rule_condition_combine>
+                </observers>
+            </salesrule_rule_condition_combine>
+        </events>
         <models>
             <week3>
                 <class>Peter_Week3_Model</class>
