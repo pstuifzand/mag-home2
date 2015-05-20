@@ -124,6 +124,13 @@
                     <frontName>week3</frontName>
                 </args>
             </week3>
+            <checkout>
+                <args>
+                    <modules>
+                        <Peter_Week3 before="Mage_Checkout">Peter_Week3_Checkout</Peter_Week3>
+                    </modules>
+                </args>
+            </checkout>
         </routers>  
         <layout>
             <updates>
