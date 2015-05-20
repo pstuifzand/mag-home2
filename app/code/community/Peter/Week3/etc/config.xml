@@ -31,6 +31,64 @@
                     </peter_week3_sales_rule_condition_combine>
                 </observers>
             </salesrule_rule_condition_combine>
+
+            <sales_quote_remove_item>
+                <observers>
+                    <peter_week3_model_observer>
+                        <type>singleton</type>
+                        <class>Peter_Week3_Model_Observer</class>
+                        <method>eventRemoveSalesQuoteItem</method>
+                    </peter_week3_model_observer>
+                </observers>
+            </sales_quote_remove_item>
+            <sales_quote_add_item>
+                <observers>
+                    <peter_week3_model_observer>
+                        <type>singleton</type>
+                        <class>Peter_Week3_Model_Observer</class>
+                        <method>eventAddSalesQuoteItem</method>
+                    </peter_week3_model_observer>
+                </observers>
+            </sales_quote_add_item>
+
+            <checkout_cart_product_add_after>
+                <observers>
+                    <peter_week3_model_observer>
+                        <type>singleton</type>
+                        <class>Peter_Week3_Model_Observer</class>
+                        <method>afterProductAdd</method>
+                    </peter_week3_model_observer>
+                </observers>
+            </checkout_cart_product_add_after>
+            <checkout_cart_product_update_after>
+                <observers>
+                    <peter_week3_model_observer>
+                        <type>singleton</type>
+                        <class>Peter_Week3_Model_Observer</class>
+                        <method>afterUpdateProduct</method>
+                    </peter_week3_model_observer>
+                </observers>
+            </checkout_cart_product_update_after>
+            <checkout_cart_update_items_after>
+                <observers>
+                    <peter_week3_model_observer>
+                        <type>singleton</type>
+                        <class>Peter_Week3_Model_Observer</class>
+                        <method>afterUpdateItems</method>
+                    </peter_week3_model_observer>
+                </observers>
+            </checkout_cart_update_items_after>
+            <checkout_cart_update_items_before>
+                <observers>
+                    <peter_week3_model_observer>
+                        <type>singleton</type>
+                        <class>Peter_Week3_Model_Observer</class>
+                        <method>beforeUpdateItems</method>
+                    </peter_week3_model_observer>
+                </observers>
+            </checkout_cart_update_items_before>
+
+
         </events>
         <models>
             <week3>
