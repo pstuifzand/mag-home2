@@ -24,7 +24,10 @@ class Peter_Week3_Model_Sales_Quote_Address_Total_Discount extends Mage_Sales_Mo
 
             $this->_addBaseAmount($baseAmt);
             $this->_addAmount($amt);
+
+            break;
         }
+        return $this;
     }
 
     public function fetch(Mage_Sales_Model_Quote_Address $address)
