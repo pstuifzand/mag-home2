@@ -21,6 +21,22 @@
                 </rewrite>
             </page>
         </blocks>
+        <fieldsets>
+            <sales_convert_quote_item>
+                <supplier_sku>
+                    <to_order_item>*</to_order_item>
+                </supplier_sku>
+            </sales_convert_quote_item>
+        </fieldsets>
+        <sales>
+            <quote>
+                <item>
+                    <product_attributes>
+                        <supplier_sku />
+                    </product_attributes>
+                </item>
+            </quote>
+        </sales>
         <events>
             <salesrule_rule_condition_combine>
                 <observers>
@@ -87,8 +103,14 @@
                     </peter_week3_model_observer>
                 </observers>
             </checkout_cart_update_items_before>
-
-
+            <sales_quote_item_set_product>
+                <observers>
+                    <peter_week3_model_observer>
+                        <class>week3/observer</class>
+                        <method>setSupplierSkuAttribute</method>
+                    </peter_week3_model_observer>
+                </observers>
+            </sales_quote_item_set_product>
         </events>
         <models>
             <week3>

@@ -74,4 +74,10 @@ class Peter_Week3_Model_Observer {
         }
     }
 
+    public function setSupplierSkuAttribute($observer) {
+        $item = $observer->getQuoteItem();
+        $product = $observer->getProduct();
+        $item->setSupplierSku($product->getSupplierSku());
+        return $this;
+    }
 }
