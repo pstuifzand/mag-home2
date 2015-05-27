@@ -35,6 +35,11 @@
                         <supplier_sku />
                     </product_attributes>
                 </item>
+                <totals>
+                    <discount>
+                        <class>week3/sales_quote_address_total_discount</class>
+                    </discount>
+                </totals>
             </quote>
         </sales>
         <events>
