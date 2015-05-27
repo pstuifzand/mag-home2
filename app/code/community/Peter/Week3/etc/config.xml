@@ -67,6 +67,16 @@
                 </observers>
             </sales_quote_add_item>
 
+            <sales_quote_save_before>
+                <observers>
+                    <peter_week3_model_observer>
+                        <type>singleton</type>
+                        <class>Peter_Week3_Model_Observer</class>
+                        <method>eventSalesQuoteSaveBefore</method>
+                    </peter_week3_model_observer>
+                </observers>
+            </sales_quote_save_before>
+
             <checkout_cart_product_add_after>
                 <observers>
                     <peter_week3_model_observer>

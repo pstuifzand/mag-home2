@@ -80,4 +80,28 @@ class Peter_Week3_Model_Observer {
         $item->setSupplierSku($product->getSupplierSku());
         return $this;
     }
+    public function eventSalesQuoteSaveBefore($observer) {
+        $quote = $observer->getQuote();
+
+        if ($quote) {
+            $address = $quote->getShippingAddress();
+            if ($address) {
+                $removeItem = false;
+                $country = $address->getCountryId();
+                if ($country == 'US') {
+                    foreach ($quote->getItemsCollection() as $item) {
+                        if ($item->getSupplierSku() == 'SUPMP3') {
+                            $removeItem = $item;
+                            break;
+                        }
+                    }
+                    if ($removeItem) {
+                        $quote->deleteItem($removeItem);
+                        $session = Mage::getSingleton('checkout/session');
+                        $session->addError(Mage::helper('peter_week3')->__('Product with SKU %s isn\'t sold in the US', $removeItem->getSupplierSku()));
+                    }
+                }
+            }
+        }
+    }
 }
