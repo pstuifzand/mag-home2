@@ -34,18 +34,18 @@ class Peter_Week3_Model_Indexer_Comment extends Mage_Index_Model_Indexer_Abstrac
 
     protected function _registerEvent(Mage_Index_Model_Event $event)
     {
-        Mage::log('_registerEvent');
+        #Mage::log('_registerEvent');
     }
 
     protected function _processEvent(Mage_Index_Model_Event $event)
     {
-        Mage::log('_processEvent');
+        #Mage::log('_processEvent');
     }
 
     public function matchEvent(Mage_Index_Model_Event $event)
     {
-        Mage::log('matchEvent');
-        Mage::log($event);
+        #Mage::log('matchEvent');
+        #Mage::log($event);
         return false;
     }
 
